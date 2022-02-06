@@ -6,6 +6,12 @@ public class Triangle extends Shape {
     }
 
     @Override
+    public void name(String name) {
+        this.name=name;
+    }
+
+
+    @Override
     protected void setCoordinates(int x, int y, int z) {
         this.x = x;
         this.y = y;
@@ -37,4 +43,5 @@ public class Triangle extends Shape {
         this.sizeBorderWidth = sizeBorderWidth;
 
     }
+
 }

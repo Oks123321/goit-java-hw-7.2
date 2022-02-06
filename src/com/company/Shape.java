@@ -1,10 +1,11 @@
 package com.company;
 
 public abstract class Shape implements Borderable {
-    int x, y, z;
-    int red, green, blue;
-    int sizeScale;
-    int sizeBorderWidth;
+    protected int x, y, z;
+    protected int red, green, blue;
+    protected int sizeScale;
+    protected int sizeBorderWidth;
+    protected String name;
 
     protected abstract void setCoordinates(int x, int y, int z);
 
@@ -14,6 +15,11 @@ public abstract class Shape implements Borderable {
 
     public void draw() {
         System.out.println("Фигура");
+    }
+
+    @Override
+    public void name(String name) {
+        this.name=name;
     }
 
     @Override

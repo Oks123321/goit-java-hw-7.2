@@ -4,6 +4,11 @@ public class Quad extends Shape {
     public void draw() {
         System.out.println("Квадрат");
     }
+
+    @Override
+    public void name(String name) {
+        this.name=name;
+    }
     @Override
     protected void setCoordinates(int x, int y, int z) {
         this.x = x;

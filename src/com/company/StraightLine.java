@@ -5,15 +5,23 @@ public class StraightLine implements Borderable {
         System.out.println("Линия");
     }
 
-    int x, y, z;
-    int red, green, blue;
-    int sizeBorderWidth;
-    int sizeScale;
+    protected int x, y, z;
+    protected int red, green, blue;
+    protected int sizeBorderWidth;
+    protected int sizeScale;
+    protected String name;
 
     protected void setColor(int red, int green, int blue) {
         this.red = red;
         this.green = green;
         this.blue = blue;
+    }
+
+
+
+    @Override
+    public void name(String name) {
+        this.name=name;
     }
 
     @Override
@@ -23,7 +31,7 @@ public class StraightLine implements Borderable {
 
     @Override
     public void setScale(int sizeScale) {
-
+        this.sizeScale = sizeScale;
     }
 }
 

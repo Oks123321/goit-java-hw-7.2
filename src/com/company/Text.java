@@ -1,14 +1,18 @@
 package com.company;
 
-import javafx.scene.paint.Color;
 
 public class Text implements Scalable {
-    int x, y, z;
-    int red, green, blue;
-    int sizeScale;
+    protected int x, y, z;
+    protected int red, green, blue;
+    protected int sizeScale;
+    protected String name;
 
     public void draw() {
         System.out.println("Текст");
+    }
+    @Override
+    public void name(String name) {
+        this.name=name;
     }
 
     protected void setColor(int red, int green, int blue) {
