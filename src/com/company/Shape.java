@@ -1,41 +1,32 @@
 package com.company;
 
-import javafx.scene.paint.Color;
-
 public abstract class Shape implements Borderable {
+    int x, y, z;
+    int red, green, blue;
+    int sizeScale;
+    int sizeBorderWidth;
 
-        public void draw()
-        {
-            System.out.println("Фигура");
-        }
+    protected abstract void setCoordinates(int x, int y, int z);
 
-    @Override
-    public double getBorderWidth() {
-        return 0;
+    protected abstract void setColor(int red, int green, int blue);
+
+    protected abstract void setBorderColor(int red, int green, int blue);
+
+    public void draw() {
+        System.out.println("Фигура");
     }
 
     @Override
-    public Color getBorderColor() {
-        return null;
+    public void setScale(int sizeScale) {
+        this.sizeScale = sizeScale;
     }
 
     @Override
-    public double getX() {
-        return 0;
-    }
-
-    @Override
-    public double getY() {
-        return 0;
-    }
-
-    @Override
-    public Color getColor() {
-        return null;
-    }
-
-    @Override
-    public double getScale() {
-        return 0;
+    public void setBorderWidth(int sizeBorderWidth) {
+        this.sizeBorderWidth = sizeBorderWidth;
     }
 }
+
+
+
+

@@ -1,39 +1,29 @@
 package com.company;
 
-import javafx.scene.paint.Color;
-
-public class StraightLine implements Borderable{
-       public void draw() {
+public class StraightLine implements Borderable {
+    public void draw() {
         System.out.println("Линия");
     }
 
-    @Override
-    public double getBorderWidth() {
-        return 0;
+    int x, y, z;
+    int red, green, blue;
+    int sizeBorderWidth;
+    int sizeScale;
+
+    protected void setColor(int red, int green, int blue) {
+        this.red = red;
+        this.green = green;
+        this.blue = blue;
     }
 
     @Override
-    public Color getBorderColor() {
-        return null;
+    public void setBorderWidth(int sizeBorderWidth) {
+        this.sizeBorderWidth = sizeBorderWidth;
     }
 
     @Override
-    public double getX() {
-        return 0;
-    }
+    public void setScale(int sizeScale) {
 
-    @Override
-    public double getY() {
-        return 0;
-    }
-
-    @Override
-    public Color getColor() {
-        return null;
-    }
-
-    @Override
-    public double getScale() {
-        return 0;
     }
 }
+

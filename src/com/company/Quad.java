@@ -1,40 +1,39 @@
 package com.company;
 
-import javafx.scene.paint.Color;
-
 public class Quad extends Shape {
-    @Override
     public void draw() {
         System.out.println("Квадрат");
     }
-
     @Override
-    public double getBorderWidth() {
-        return super.getBorderWidth();
+    protected void setCoordinates(int x, int y, int z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
     }
 
     @Override
-    public Color getBorderColor() {
-        return super.getBorderColor();
+    protected void setColor(int red, int green, int blue) {
+        this.red = red;
+        this.green = green;
+        this.blue = blue;
     }
 
     @Override
-    public double getX() {
-        return super.getX();
+    protected void setBorderColor(int red, int green, int blue) {
+        this.red = red;
+        this.green = green;
+        this.blue = blue;
+    }
+
+
+    @Override
+    public void setScale(int sizeScale) {
+        this.sizeScale = sizeScale;
     }
 
     @Override
-    public double getY() {
-        return super.getY();
-    }
+    public void setBorderWidth(int sizeBorderWidth) {
+        this.sizeBorderWidth = sizeBorderWidth;
 
-    @Override
-    public Color getColor() {
-        return super.getColor();
-    }
-
-    @Override
-    public double getScale() {
-        return super.getScale();
     }
 }

@@ -1,8 +1,9 @@
 package com.company;
 
-import javafx.scene.paint.Color;
 
-public interface Borderable extends ScalableDrawable{
-    double getBorderWidth();
-    Color getBorderColor();
+
+public interface Borderable extends Scalable{
+
+    void setBorderWidth(int sizeBorderWidth);
+
 }

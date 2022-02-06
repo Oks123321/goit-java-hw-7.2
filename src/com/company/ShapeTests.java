@@ -5,15 +5,16 @@ public class ShapeTests {
 
         Triangle triangle = new Triangle();
         Text text = new Text();
-        StraightLine line = new StraightLine();
         Circle circle = new Circle();
         Quad quad = new Quad();
+        StraightLine line = new StraightLine();
+
+
         triangle.draw();
         text.draw();
-        line.draw();
         circle.draw();
         quad.draw();
-
+        line.draw();
 
 
     }
